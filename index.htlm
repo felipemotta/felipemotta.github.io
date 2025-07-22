@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Felipe Motta</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    img {
+      max-width: 90%;
+      max-height: 90vh;
+    }
+  </style>
+</head>
+<body>
+  <img src="assets/logo.png" alt="Felipe Motta Logo">
+</body>
+</html>
