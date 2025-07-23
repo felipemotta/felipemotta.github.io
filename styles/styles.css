@@ -1,3 +1,4 @@
+/* ============ Body ============ */
 html, body {
     margin: 0;
     padding: 0;
@@ -6,9 +7,10 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Merriweather', Georgia, serif;
 }
 
-/* Logo styles */
+/* logo */
 .logocontainer {
     display: flex;
     justify-content: center;
@@ -27,6 +29,7 @@ a.logofelipemotta svg {
     width: 100%;
     height: auto;
     fill: rgb(212, 212, 212);
+    opacity: 50%;
 }
 
 #logopath {
@@ -34,4 +37,38 @@ a.logofelipemotta svg {
     fill-opacity: 1;
     stroke-miterlimit: 4;
     stroke-dasharray: none;
+}
+
+/* ============ footer ============ */
+.sitefooter {
+  position: absolute;
+  bottom: 2rem;
+  width: 100%;
+  text-align: center;
+  padding: 0 1rem;
+  color: #888;
+  font-family: 'Merriweather', serif;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Quote */
+.footerquote {
+  font-style: italic;
+  text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #aaa;
+}
+
+.footerquote em {
+  font-style: italic;
+  color: #bbb;
+}
+
+.footerquote strong {
+  color: #d4d4d4;
 }
