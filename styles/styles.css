@@ -9,7 +9,6 @@ html, body {
   justify-content: center;
   align-items: center;
   font-family: 'Merriweather', serif;
-  color: #d4d4d4;
 }
 
 /* Logo */
@@ -30,8 +29,8 @@ a.logo-felipemotta svg {
   display: block;
   width: 100%;
   height: auto;
-  fill: rgb(212, 212, 212);
-  opacity: 0.5;
+  fill: rgb(255, 255, 255);
+  opacity: 0.9;
 }
 
 #logo-path {
@@ -50,7 +49,7 @@ a.logo-felipemotta svg {
   justify-content: center;
   text-align: center;
   font-family: 'Merriweather', serif;
-  color: #888;
+  color: #ffffff;
 }
 
 /* Quote */
@@ -61,4 +60,5 @@ a.logo-felipemotta svg {
   margin: 0 auto;
   font-size: 10px;
   line-height: 1.4;
+  color: #ffffff;
 }
