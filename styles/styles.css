@@ -41,18 +41,14 @@ a.logofelipemotta svg {
 
 /* ============ footer ============ */
 .sitefooter {
-  position: absolute;
-  bottom: 2rem;
+  margin-top: auto;
+  padding: 2rem 1rem 1rem;
   width: 100%;
-  text-align: center;
-  padding: 0 1rem;
-  color: #888;
-  font-family: 'Merriweather', serif;
-  font-size: 0.95rem;
-  line-height: 1.4;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  color: #888;
 }
 
 /* Quote */
@@ -62,6 +58,8 @@ a.logofelipemotta svg {
   max-width: 800px;
   margin: 0 auto;
   color: #aaa;
+  font-size: 10px;
+  line-height: 1.4;
 }
 
 .footerquote em {
@@ -70,5 +68,7 @@ a.logofelipemotta svg {
 }
 
 .footerquote strong {
+  font-style: normal;
+  font-weight: normal;
   color: #d4d4d4;
 }
