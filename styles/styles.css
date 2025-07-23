@@ -45,9 +45,6 @@ a.logo-felipemotta svg {
   margin-top: auto;
   padding: 2rem 1rem 1rem;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  text-align: center;
   font-family: 'Merriweather', serif;
   color: #ffffff;
 }
@@ -58,7 +55,7 @@ a.logo-felipemotta svg {
   text-align: right;
   max-width: 800px;
   margin: 0 auto;
-  font-size: 4px;
+  font-size: 1.5vw;
   line-height: 1.4;
   color: #ffffff;
 }
