@@ -61,11 +61,10 @@ a.logo-felipemotta svg {
 }
 
 .footer-quote em {
-  font-style: italic;
   text-align: right;
-  max-width: 800px;
-  margin: 0 auto;
   font-size: 1.3vw;
-  line-height: 1.4;
-  color: #ffffff;
+}
+
+.footer-quote strong {
+  font-style: bold;
 }
