@@ -7,16 +7,19 @@ body {
   align-items: center;
   height: 100vh;
 }
-.logo-container svg {
+
+svg.logo-holo {
   width: 320px;
   height: auto;
 }
+
 .shimmer-group {
   opacity: 0;
   transform: translateX(-100%) skewX(-25deg);
   animation: shimmerLoop 8s infinite ease-in-out;
   transform-origin: left center;
 }
+
 @keyframes shimmerLoop {
   0%, 15%   { opacity: 0; transform: translateX(-100%) skewX(-25deg); }
   20%  { opacity: 1; transform: translateX(-60%) skewX(-25deg); }
