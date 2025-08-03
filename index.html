@@ -8,60 +8,72 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet" />
   </head>
-<body>
-  <svg fill="white" class="logo-holo" viewBox="0 0 1000 572" xmlns="http://www.w3.org/2000/svg">
-    <defs>
-      <filter id="metalBase" x="-50%" y="-50%" width="200%" height="200%">
-        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" result="turb" />
-        <feDisplacementMap in2="turb" in="SourceGraphic" scale="5" xChannelSelector="R" yChannelSelector="G" />
-        <feColorMatrix type="saturate" values="0.3" />
-      </filter>
+  <body>
 
-      <filter id="holoRipple">
-        <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="2" result="turb" />
-        <feDisplacementMap in2="turb" in="SourceGraphic" scale="10" xChannelSelector="R" yChannelSelector="B" />
-      </filter>
+    <div class="logo-container">
+      <a class="logo-felipemotta" href="https://linktr.ee/felipe.motta", target="_blank" rel="noopener noreferrer">
+        <svg fill="white" class="logo-holo" viewBox="0 0 1000 572" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="metalBase" x="-50%" y="-50%" width="200%" height="200%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" result="turb" />
+              <feDisplacementMap in2="turb" in="SourceGraphic" scale="5" xChannelSelector="R" yChannelSelector="G" />
+              <feColorMatrix type="saturate" values="0.3" />
+            </filter>
+        
+            <filter id="holoRipple">
+              <feTurbulence type="turbulence" baseFrequency="0.01" numOctaves="2" result="turb" />
+              <feDisplacementMap in2="turb" in="SourceGraphic" scale="10" xChannelSelector="R" yChannelSelector="B" />
+            </filter>
+        
+            <filter id="fineGrain">
+              <feTurbulence type="fractalNoise" baseFrequency="2.5" numOctaves="6" result="grain" />
+              <feColorMatrix type="saturate" values="0" />
+              <feComponentTransfer>
+                <feFuncA type="linear" slope="0.05" />
+              </feComponentTransfer>
+            </filter>
+        
+            <linearGradient id="holoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#7bf9fdff" stop-opacity="0.9" />
+              <stop offset="25%" stop-color="#0077ff" stop-opacity="0.9" />
+              <stop offset="50%" stop-color="#7aff7aff" stop-opacity="0.8" />
+              <stop offset="75%" stop-color="#f4ff5bff" stop-opacity="0.8" />
+              <stop offset="100%" stop-color="#d8e4ffff" stop-opacity="0.6" />
+            </linearGradient>
+        
+            <linearGradient id="flashMaskGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="white" stop-opacity="1" />
+              <stop offset="100%" stop-color="black" stop-opacity="0" />
+            </linearGradient>
+        
+            <mask id="m-mask">
+              <use href="assets/logo.svg#logo-path"/>
+            </mask>
+        
+            <mask id="flash-mask">
+              <rect x="0" y="0" width="100%" height="100%" fill="url(#flashMaskGradient)" />
+            </mask>
+          </defs>
+        
+          <!-- Base metallic texture -->
+          <rect width="100%" height="100%" fill="#ccc" filter="url(#metalBase)" mask="url(#m-mask)" />
+        
+          <!-- Flash shimmer group -->
+          <g mask="url(#m-mask)">
+            <g class="shimmer-group">
+              <rect width="100%" height="100%" fill="url(#holoGradient)" filter="url(#holoRipple)" mask="url(#flash-mask)" />
+              <rect width="100%" height="100%" fill="#fff" filter="url(#fineGrain)" mask="url(#flash-mask)" />
+            </g>
+          </g>
+        </svg>
+      </a>
+    </div>
 
-      <filter id="fineGrain">
-        <feTurbulence type="fractalNoise" baseFrequency="2.5" numOctaves="6" result="grain" />
-        <feColorMatrix type="saturate" values="0" />
-        <feComponentTransfer>
-          <feFuncA type="linear" slope="0.05" />
-        </feComponentTransfer>
-      </filter>
-
-      <linearGradient id="holoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#7bf9fdff" stop-opacity="0.9" />
-        <stop offset="25%" stop-color="#0077ff" stop-opacity="0.9" />
-        <stop offset="50%" stop-color="#7aff7aff" stop-opacity="0.8" />
-        <stop offset="75%" stop-color="#f4ff5bff" stop-opacity="0.8" />
-        <stop offset="100%" stop-color="#d8e4ffff" stop-opacity="0.6" />
-      </linearGradient>
-
-      <linearGradient id="flashMaskGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="white" stop-opacity="1" />
-        <stop offset="100%" stop-color="black" stop-opacity="0" />
-      </linearGradient>
-
-      <mask id="m-mask">
-        <use href="assets/logo.svg#logo-path"/>
-      </mask>
-
-      <mask id="flash-mask">
-        <rect  x="0" y="0" width="100%" height="100%" fill="url(#flashMaskGradient)" />
-      </mask>
-    </defs>
-
-    <!-- Base metallic texture -->
-    <rect width="100%" height="100%" fill="#ccc" filter="url(#metalBase)" mask="url(#m-mask)" />
-
-    <!-- Flash shimmer group -->
-    <g mask="url(#m-mask)">
-      <g class="shimmer-group">
-        <rect width="100%" height="100%" fill="url(#holoGradient)" filter="url(#holoRipple)" mask="url(#flash-mask)" />
-        <rect width="100%" height="100%" fill="#fff" filter="url(#fineGrain)" mask="url(#flash-mask)" />
-      </g>
-    </g>
-  </svg>
-</body>
+    <footer class="site-footer">
+      <p class="footer-quote">
+        Unleash the <strong>beast</strong> inside <br> 
+          — <em>because legends were never meant to be average</em>
+      </p>
+    </footer>
+  </body>
 </html>
