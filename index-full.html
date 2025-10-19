@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Primary SEO -- >
+  <meta name="description" content="Felipe Motta offers premium, personalized guitar mentorship for metal & rock players. Free assessment, simple path, and luxury Apple-like UX. Book a lesson or a free virtual coffee." />
+  <link rel="canonical" href="https://felipemotta.github.io/" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -- >
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Felipe Motta | Guitar Mentor & Metal Artist" />
+  <meta property="og:description" content="Personalized guitar mentorship that helps you unleash the beast inside. Book a lesson or grab a free virtual coffee." />
+  <meta property="og:url" content="https://felipemotta.github.io/" />
+  <meta property="og:image" content="https://felipemotta.github.io/og-cover.jpg" />
+  
+  <!-- Twitter -- >
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Felipe Motta | Guitar Mentor & Metal Artist" />
+  <meta name="twitter:description" content="Premium, personalized mentorship for modern guitarists. Free assessment. Book now." />
+  <meta name="twitter:image" content="https://felipemotta.github.io/og-cover.jpg" />  TODO: ENABLE WHEN FINAL DOMAIN-->
+  
+  <!-- PWA tone tweaks -->
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>Felipe Motta | Unleash the Beast</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <style>
+    :root { --bg:#0a0a0a; --fg:#f5f5f7; --muted:#b5b5c0; --line:rgba(255,255,255,.08); --surface:#0e0e10; --glass:rgba(20,20,22,.6); --shadow:0 20px 60px rgba(0,0,0,.45); }
+    html, body { background:var(--bg); color:var(--fg); margin:0; font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',Roboto,Helvetica,Arial,sans-serif; scroll-behavior:smooth; overflow-x:hidden; }
+
+    /* Navbar */
+    .navbar { position:fixed; inset:0 0 auto 0; z-index:1000; padding:1rem 1.25rem; background:transparent; transition:background .3s ease, backdrop-filter .3s ease; }
+    .navbar.scrolled { background:var(--glass); backdrop-filter:blur(12px) saturate(150%); border-bottom:1px solid var(--line); }
+    .navbar-brand { font-weight:700; display:flex; align-items:center; gap:.5rem; color:var(--fg); text-decoration:none; }
+    .navbar-brand:hover { color:var(--fg); opacity:1; }
+    .brand-logo-svg { height:28px; width:28px; display:inline-block; }
+    .navbar-toggler { border:0; background:none; color:var(--fg); font-size:1.5rem; }
+    .nav-link { color:var(--fg) !important; opacity:.85; font-weight:600; transition:opacity .3s ease; }
+    .nav-link:hover { opacity:1; }
+    .socials a { color:#fff !important; font-size:1.25rem; opacity:.85; transition:opacity .3s ease; }
+    .socials a:hover { opacity:1; }
+
+    /* Floating socials for portrait (thumb height, center-right) */
+    .socials-float { display:none; position:fixed; right:12px; top:50%; transform:translateY(-50%); z-index:1001; flex-direction:column; gap:12px; }
+    .socials-float a { display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px; border-radius:50%; background:#ffffff14; color:#fff; }
+    .socials-float a:hover { background:#ffffff2a; }
+    @media (orientation:portrait) and (max-width:991.98px){ .socials-float{ display:flex; } }
+
+    /* Hero / Slider */
+    #hero{ position:relative; height:100vh; min-height:100vh; }
+    #heroCarousel, #heroCarousel .carousel-inner, #heroCarousel .carousel-item { height:100vh; }
+    #hero .carousel-item img { width:100%; height:100%; object-fit:cover; filter:brightness(.65) contrast(1.02); }
+    .carousel-control-prev, .carousel-control-next { display:flex; align-items:center; justify-content:center; width:40vw; opacity:0; transition:opacity .25s ease; }
+    .carousel-control-prev:hover, .carousel-control-next:hover { opacity:.15; }
+    .carousel-control-prev:focus, .carousel-control-next:focus { opacity:.20; }
+    .hero-overlay{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; text-align:center; padding:0 6vw; z-index:5; pointer-events:none; }
+    .hero-overlay::before{ content:""; position:absolute; inset:0; background:radial-gradient(80% 50% at 50% 60%, rgba(0,0,0,0) 0%, rgba(0,0,0,.35) 60%, rgba(0,0,0,.6) 100%); pointer-events:none; z-index:-1; }
+    .hero-box{ max-width:920px; }
+    .hero-title{ font-size:clamp(2.4rem,2.6vw,4rem); font-weight:800; margin-bottom:.5rem; }
+    .hero-sub{ color:var(--muted); margin-bottom:1.25rem; font-size:clamp(1rem,.4rem+.9vw,1.25rem); }
+    .btn-main{ background:#fff; color:#000; padding:14px 28px; border:none; border-radius:999px; font-weight:700; box-shadow:0 10px 30px rgba(0,0,0,.45); transition:transform .2s ease; pointer-events:auto; }
+    .btn-main:hover{ transform:translateY(-2px); background:#f1f1f1; }
+
+    /* Sections */
+    .section{ padding:clamp(80px,8vw,140px) 0; position:relative; }
+    .section .sub{ display:block; font-size:.9rem; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin-bottom:.25rem; }
+    .section .desc{ color:var(--muted); max-width:64ch; margin:0 auto 1.25rem; }
+
+    /* Chips */
+    .flow{ display:flex; gap:10px; flex-wrap:wrap; justify-content:center; }
+    .chip{ background:var(--surface); border:0.5px solid var(--line); border-radius:999px; padding:8px 14px; font-weight:600; }
+
+    /* Merch */
+    .merch .card{ background:var(--surface); border:0.5px solid var(--line); border-radius:20px; padding:22px; height:100%; display:flex; flex-direction:column; transition:transform .25s ease, background .25s ease, border-color .25s ease; }
+    .merch .card:hover{ transform:translateY(-3px); background:#121214; border-color:rgba(255,255,255,.14); }
+    .merch .card img{ width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:14px; margin-bottom:.75rem; border:0.5px solid var(--line); }
+    .merch .card h5{ color:var(--fg); margin-top:.25rem; }
+    .merch .card p{ color:var(--muted); }
+    .btn-ghost{ background:#fff; color:#000; border:none; border-radius:999px; padding:10px 20px; font-weight:700; margin-top:auto; }
+
+    footer{ text-align:center; color:var(--muted); padding:56px 0; border-top:1px solid var(--line); }
+  </style>
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Felipe Motta",
+    "url": "https://felipemotta.github.io/",
+    "sameAs": [
+      "https://www.instagram.com/yourprofile",
+      "https://www.youtube.com/yourchannel",
+      "https://open.spotify.com/artist/yourid",
+      "https://www.facebook.com/yourpage",
+      "https://www.tiktok.com/@yourhandle"
+    ],
+    "jobTitle": "Guitar Mentor & Metal Artist",
+    "description": "Personalized guitar mentorship for modern players with a free assessment and simple path.",
+    "knowsAbout": ["metal guitar", "guitar tone", "songwriting", "performance", "mindset coaching"],
+    "address": {"@type": "PostalAddress", "addressCountry": "CH"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Felipe Motta",
+    "url": "https://felipemotta.github.io/"
+  }
+  </script>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <svg class="brand-logo-svg me-2" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo placeholder"><circle cx="14" cy="14" r="13.5" fill="#ffffff"/></svg>
+        <span>Felipe Motta</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-lg-center gap-lg-4">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#technique">My Technique</a></li>
+          <li class="nav-item"><a class="nav-link" href="#merch">Merch</a></li>
+          <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- Desktop socials -->
+      <div class="d-none d-lg-flex socials align-items-center gap-3 ms-3">
+        <a href="#" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="#" aria-label="Spotify" title="Spotify"><i class="bi bi-spotify"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Floating socials (portrait) -->
+  <div class="socials-float d-lg-none">
+    <a href="#" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+    <a href="#" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+    <a href="#" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+    <a href="#" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+    <a href="#" aria-label="Spotify" title="Spotify"><i class="bi bi-spotify"></i></a>
+  </div>
+
+  <!-- HERO / SLIDER -->
+  <header id="hero">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-touch="true" data-bs-pause="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active"><img src="https://placehold.co/2000x1200/0e0e10/FFFFFF?text=Guitarist+on+Stage" alt="Guitarist on stage"></div>
+        <div class="carousel-item"><img src="https://placehold.co/2000x1200/111111/EDEDED?text=Close-up+Guitar+Hands" alt="Close-up guitar hands"></div>
+        <div class="carousel-item"><img src="https://placehold.co/2000x1200/141414/FAFAFA?text=Studio+Session" alt="Studio session"></div>
+      </div>
+      <!-- Edge click navigation (no icons) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous"><span class="visually-hidden">Previous</span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" aria-label="Next"><span class="visually-hidden">Next</span></button>
+
+      <div class="hero-overlay">
+        <div class="hero-box">
+          <h1 class="hero-title">Unleash the Beast Inside</h1>
+          <p class="hero-sub">Because legends were never meant to be average.</p>
+          <button class="btn-main" onclick="scrollWithOffset('book')">Book a Lesson</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section text-center">
+    <div class="container">
+      <span class="sub">About Me</span>
+      <h2>Felipe Motta</h2>
+      <p class="desc">Guitarist × Metal × Moment of Madness</p>
+      <p class="lead mx-auto">I help guitarists who feel stuck rediscover their spark, refine their technique, and build confidence to perform at their best. Confident, humble, and focused on what actually moves the needle.</p>
+    </div>
+  </section>
+
+  <!-- TECHNIQUE -->
+  <section id="technique" class="section text-center">
+    <div class="container">
+      <span class="sub">My Technique</span>
+      <h2>Your Path — Simple & Personal</h2>
+      <p class="desc">I guide you end‑to‑end. We start with a free assessment, pick a level, and adjust as you grow.</p>
+
+      <!-- 3‑step path -->
+      <div class="row g-3 justify-content-center mb-4">
+        <div class="col-12 col-md-4">
+          <div class="card h-100" style="background:var(--surface);border:0.5px solid var(--line);border-radius:16px;padding:18px;">
+            <h6 class="mb-1">1) Free Assessment</h6>
+            <p class="mb-0" style="color:var(--muted)">10–15 min chat + quick play check → we map your starting point.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card h-100" style="background:var(--surface);border:0.5px solid var(--line);border-radius:16px;padding:18px;">
+            <h6 class="mb-1">2) Weekly Focus</h6>
+            <p class="mb-0" style="color:var(--muted)">One clear target per week (technique, song, tone, or mindset). No overwhelm.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="card h-100" style="background:var(--surface);border:0.5px solid var(--line);border-radius:16px;padding:18px;">
+            <h6 class="mb-1">3) Review & Adjust</h6>
+            <p class="mb-0" style="color:var(--muted)">Short feedback loop. We keep what works and switch levels anytime.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Levels as a path -->
+      <div class="flow mb-2">
+        <span class="chip">Beginner → Foundations</span>
+        <span class="chip">Intermediate → Songs</span>
+        <span class="chip">Advanced → Performance</span>
+        <span class="chip">Mindset → Break Blocks</span>
+      </div>
+      <p class="lead mx-auto">You don’t have to choose perfectly — I’ll help you pick and we can move up or down anytime. The goal is steady progress you can feel.</p>
+    </div>
+  </section>
+
+  <!-- MERCH -->
+  <section id="merch" class="section text-center merch">
+    <div class="container">
+      <span class="sub">Merch</span>
+      <h2>Premium Essentials</h2>
+      <p class="desc">Minimal, durable, designed to play. Shopify links will be added soon.</p>
+      <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 align-items-stretch">
+        <div class="col">
+          <div class="card h-100">
+            <img loading="lazy" src="https://placehold.co/700x700/121212/EFEFEF?text=Pro+Picks+V1" alt="Premium guitar picks set V1 by Felipe Motta" />
+            <h5>Pro Pick Set — V1</h5>
+            <p class="mb-2">Balanced grip. Clear attack. Your daily driver.</p>
+            <a class="btn-ghost" href="">Buy</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img loading="lazy" src="https://placehold.co/700x700/131313/FFFFFF?text=Pro+Picks+V2" alt="Premium guitar picks set V2 by Felipe Motta" />
+            <h5>Pro Pick Set — V2</h5>
+            <p class="mb-2">Extra bite. Fast response. Studio + stage.</p>
+            <a class="btn-ghost" href="">Buy</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100">
+            <img loading="lazy" src="https://placehold.co/700x700/151515/F5F5F5?text=Personalised+Picks" alt="Personalised customized guitar picks by Felipe Motta" />
+            <h5>Personalised Picks</h5>
+            <p class="mb-2">Your logo. Your vibe. Limited runs.</p>
+            <a class="btn-ghost" href="">Buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <a class="btn-ghost" href="">More on Shopify →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section id="book" class="section contact text-center">
+    <div class="container">
+      <span class="sub">Book</span>
+      <h2>Book a Lesson</h2>
+      <p class="desc">Main path: start with a session. If you’re unsure, we can jump on a free virtual coffee and check fit.</p>
+      <button class="btn-main mt-2">Book a Lesson</button>
+      <p class="mt-3" style="color:var(--muted)">Not ready? <a href="#" style="color:inherit;opacity:.9;text-decoration:underline">Let’s have a free virtual coffee ☕</a></p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section text-center">
+    <div class="container">
+      <span class="sub">Contact</span>
+      <h2>Collabs • Sponsorships • Sessions</h2>
+      <p class="desc">Open to guitar features, studio work, scores, brand partnerships, and jams.</p>
+      <p class="lead mx-auto">Email: <a href="mailto:hello@felipemotta.com" style="color:inherit;text-decoration:underline">hello@felipemotta.com</a></p>
+      <div class="d-flex justify-content-center gap-3 mt-2 socials">
+        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a href="#" aria-label="Spotify"><i class="bi bi-spotify"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container d-flex flex-column align-items-center">
+      <div class="mb-2" style="height:28px">
+        <svg class="brand-logo-svg" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo placeholder"><circle cx="14" cy="14" r="13.5" fill="#ffffff"/></svg>
+      </div>
+      <p>© <span id="year"></span> Felipe Motta</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // year
+    const y=document.getElementById('year'); if(y) y.textContent=new Date().getFullYear();
+    // glassy navbar on scroll
+    const navbar=document.querySelector('.navbar');
+    window.addEventListener('scroll',()=>{ if(window.scrollY>10) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled'); });
+    // smooth scroll with header offset
+    function scrollWithOffset(id){ const el=document.getElementById(id); if(!el) return; const y=el.getBoundingClientRect().top + window.pageYOffset - (navbar.offsetHeight + 10); window.scrollTo({top:y,behavior:'smooth'}); } window.scrollWithOffset=scrollWithOffset;
+  </script>
+</body>
+</html>
