@@ -31,7 +31,7 @@ svg.logo-holo {
 html, body { background:var(--bg); color:var(--fg); margin:0; font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','Segoe UI',Roboto,Helvetica,Arial,sans-serif; scroll-behavior:smooth; overflow-x:hidden; }
 
 /* Signature */
-.signature-image { filter:grayscale(100%); opacity: .95; }
+.signature-image { filter:grayscale(100%); opacity:.95}
 
 /* Navbar */
 .navbar { position:fixed; inset:0 0 auto 0; z-index:1000; padding:1rem 1.25rem; background:transparent; transition:background .3s ease, backdrop-filter .3s ease; }
