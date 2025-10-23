@@ -1,31 +1,12 @@
 /* ============ Body ============ */
-svg.logo-holo-footer {
-  width: 200px;
-  height: 200px;
-  display: inline-block;
-  fill: rgb(255, 255, 255);
-}
+svg.logo-holo-footer { width: 200px; height: 200px; display: inline-block; fill: rgb(255, 255, 255); }
 
-svg.logo-holo {
-  width: clamp(55px, 6.5vw, 90px);
-  height: clamp(55px, 6.5vw, 90px);
-  display: inline-block;
-  fill: rgb(255, 255, 255);
-}
-@media (max-width: 480px) {
-  svg.logo-holo { width: 55px; height: 55px; }
-}
-@media (min-width: 1200px) {
-  svg.logo-holo { width: 90px; height: 90px; }
-}
+svg.logo-holo { width: clamp(55px, 6.5vw, 90px); height: clamp(55px, 6.5vw, 90px); display: inline-block;fill: rgb(255, 255, 255); }
+@media (max-width: 480px) { svg.logo-holo { width: 55px; height: 55px; } }
+@media (min-width: 1200px) { svg.logo-holo { width: 90px; height: 90px; }}
 
 /* effects */
-.shimmer-group {
-  opacity: 0;
-  transform: translateX(-100%) skewX(-25deg);
-  animation: shimmerLoop 8s infinite ease-in-out;
-  transform-origin: left center; 
-}
+.shimmer-group { opacity: 0; transform: translateX(-100%) skewX(-25deg); animation: shimmerLoop 8s infinite ease-in-out; transform-origin: left center; }
 
 @keyframes shimmerLoop {
   0%, 15%   { opacity: 0; transform: translateX(-100%) skewX(-25deg); }
