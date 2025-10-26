@@ -510,7 +510,7 @@ section.about-split {
     opacity:.9;
   }
 
-  /* === Responsive portrait mode === */
+  /* === Responsive portrait mode ===
   @media (max-width:991.98px){
     section.about-split {
       grid-template-columns:1fr;
@@ -534,6 +534,53 @@ section.about-split {
       filter:url(#smokeFilter) blur(50px);
       opacity:.85;
     }
+  } */
+
+  @media (max-width: 1220px) {
+  /* Switch from split to overlay */
+  section.about-split {
+    display: block;             /* stop using grid */
+    position: relative;
+    height: 100vh;              /* fill viewport */
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Image becomes a full-bleed background */
+  .about-visual {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .about-visual::before { 
+    background-position: center 22%; 
+  }
+
+  /* Text sits centered on top of the image */
+  .about-text {
+    position: relative;
+    z-index: 2;                 /* above image/smoke/fade */
+    min-height: 100vh;
+    max-width: 64ch;
+    margin: 0 auto;
+    padding: clamp(20px, 6vw, 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    /* vertical centering */
+    text-align: center;
+  }
+
+  /* Softer vertical fade for readability over photo */
+  .soft-fade {
+    background:
+      linear-gradient(180deg, rgba(0,0,0,.68) 0%, rgba(0,0,0,.42) 35%, rgba(0,0,0,0) 75%),
+      radial-gradient(80% 60% at 50% 100%, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 60%);
+  }
+
+  /* No seam bar needed when not split */
+  .seam-mist { display: none; }
   }
   .in-view .about-headline, .in-view .about-desc{ opacity:1; transform:none; }
 
