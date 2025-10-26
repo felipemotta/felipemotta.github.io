@@ -375,7 +375,6 @@ footer {
   border-top: 1px solid var(--line);
 }
 
-
 /* ================= about ================= */
 /* === Section always fills the viewport === */
 section.about-split {
@@ -510,33 +509,30 @@ section.about-split {
     opacity:.9;
   }
 
-  /* === Responsive portrait mode ===
-  @media (max-width:991.98px){
-    section.about-split {
-      grid-template-columns:1fr;
-      grid-template-rows:1fr 1fr;
-      height:100vh;
-    }
-    .about-text {
-      align-items:center;
-      text-align:center;
-    }
-    .about-visual::before { background-position:center 22%; }
-    .soft-fade { background:linear-gradient(180deg, rgba(0,0,0,.65) 0%, rgba(0,0,0,.35) 44%, rgba(0,0,0,0) 80%); }
-    .seam-mist::before {
-      top:50%;
-      left:0;
-      right:0;
-      transform:translateY(-50%);
-      width:100%;
-      height:min(18vh,180px);
-      background:radial-gradient(closest-side, rgba(0,0,0,1) 0%, rgba(0,0,0,.65) 52%, rgba(0,0,0,0) 95%);
-      filter:url(#smokeFilter) blur(50px);
-      opacity:.85;
-    }
-  } */
+  /* === projects svgs === */
+  svg.projects-svgs {
+    width: 120%;
+    padding: 5%;
+  }
+
+  .projectssvgpaths {
+    fill: #ffffff;
+    stroke: #ffffff;
+    stroke-miterlimit: 10;
+    animation:infinite;
+  }
+
+  a.projectssvgslinks {
+    justify-content: center;
+  }
+
+  /* === Responsive portrait mode === */
 
   @media (max-width: 1220px) {
+    svg.projects-svgs {
+    width: 85%;
+    padding: 5%;
+  }
   /* Switch from split to overlay */
   section.about-split {
     display: block;             /* stop using grid */
