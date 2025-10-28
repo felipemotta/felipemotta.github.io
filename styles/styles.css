@@ -102,6 +102,7 @@ svg.logo-holo {
 /* ------------------------------ SIGNATURE ------------------------------ */
 .signature-image {
   filter: grayscale(100%);
+  max-height: 89.5vw;
   opacity: .95;
 }
 
@@ -202,6 +203,9 @@ svg.logo-holo {
 @media (orientation: portrait) and (max-width: 991.98px) {
   .socials-float {
     display: flex;
+  }
+  .signature-image {
+    max-height: 100px;
   }
 }
 
@@ -745,7 +749,6 @@ a.projectssvgslinks {
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
   padding: 16px;
-  max-width: min(280px, 22vw);
   text-align: left;
   opacity: 0;
   transform: translateY(8px);
@@ -787,7 +790,7 @@ a.projectssvgslinks {
 }
 
 #technique .points {
-  margin: 0 0 6px 18px;
+    margin: 0px 0 6px -3px;
 }
 
 #technique .points li {
@@ -829,13 +832,14 @@ a.projectssvgslinks {
 }
 
 /* Desktop */
-@media (min-width: 900px) {
+@media (min-width: 1000px) {
   #technique .journey {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1vw;
-    padding: 0 1vw;
     padding-top: 1vw;
     padding-bottom: 3vw;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 
   #technique .stage {
@@ -846,11 +850,12 @@ a.projectssvgslinks {
 
   #technique .tech-card {
     margin: 0 auto;
+    
   }
 }
 
 /* Mobile */
-@media (max-width: 899.98px) {
+@media (max-width: 999.98px) {
   #technique .journey {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     position: relative;
@@ -863,12 +868,20 @@ a.projectssvgslinks {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: clamp(8px, 1vw, 16px);
-    
+    gap: clamp(8px, .5vw, 16px);
   }
   #technique .tech-card {
     margin-top: 8px;
-    max-width: 90vw;
+    max-width: 45vw;
+    min-width: 188px;
+  }
+
+  #technique .points{
+    font-size: 0.8rem;
+  }
+
+  #technique .badge {
+    font-size: 0.79rem;
   }
 }
 
