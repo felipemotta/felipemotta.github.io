@@ -28,7 +28,6 @@ TODO: ENABLE WHEN FINAL DOMAIN-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="styles/styles.css" />
-  
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
@@ -121,11 +120,10 @@ TODO: ENABLE WHEN FINAL DOMAIN-->
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="bi bi-list"></i>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-center " id="navbarNav" >
         <ul class="navbar-nav align-items-lg-center gap-lg-4 text-center">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#technique">Technique</a></li>
-          <li class="nav-item"><a class="nav-link" href="#book">Book</a></li>
           <li class="nav-item"><a class="nav-link" href="#merch">Merch</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
@@ -166,8 +164,8 @@ TODO: ENABLE WHEN FINAL DOMAIN-->
       <div class="hero-overlay">
         <div class="hero-box">
           <img class="img-fluid signature-image" src="assets/signature.svg"/>
-          <h1 class="display-6"><strong>Guitarist and Instructor</strong></h1>
-          <p class="desc lead mx-auto text-fluid"><em>Feeling stuck on guitar? Let me be your guide</em></p>
+          <h1 class="display-6"><strong>Guitarist <i class="bi bi-x" style="font-size:smaller;"></i> Instructor</strong></h1>
+          <p class="desc lead mx-auto"><em>Feeling stuck on guitar? Let me be your guide</em></p>
           <button class="btn-main" onclick="window.open('https://calendly.com/info-felipemotta/30min')">Start Journey</i></button>
         </div>
       </div>
@@ -201,46 +199,80 @@ TODO: ENABLE WHEN FINAL DOMAIN-->
     </section>
 
   <!-- TECHNIQUE -->
-  <section id="technique" class="section text-center">
-    <div class="container">
-      <span class="sub">My Technique</span>
-      <h2>Progress Øver Perfection</h2>
-      <p class="desc">Your Path: Simple & Personal</p>
-
-      <!-- Levels as a path --> 
-      <div class="flow mb-2">
-        <span class="chip">Beginner</span>
-        <span class="chip">Intermediate</span>
-        <span class="chip">Advanced</span>
-        <span class="chip">Mindset</span>
-      </div>
-      <p class="lead mx-auto">You don’t have to choose perfectly — I’ll help you pick and we can move up or down anytime. The goal is steady progress you can feel.</p>
+  <section class="section" id="technique" aria-labelledby="technique-title">
+    <div class="wrap">
+      <span class="sub">Technique</span>
+      <h2 id="technique-title">Your Guitar Journey</h2>
+      <p class="subtitle lead mx-auto">Four clear paths: pick your fit and progress naturally.</p>
+      <ol class="journey" aria-label="Tracks">
+        <li class="stage">
+          <div class="tech-pill">1</div>
+          <article class="tech-card" aria-labelledby="t1">
+            <h3 id="t1">Foundation</h3>
+            <p class="tag">Total beginners</p>
+            <p class="badge">Just bought guitar & equiment</p>
+            <ul class="points">
+              <li class="subtitle">Rhythm & chords</li>
+              <li class="subtitle">Clean fretting</li>
+              <li class="subtitle">First riffs</li>
+            </ul>
+          </article>
+        </li>
+        <li class="stage">
+          <div class="tech-pill">2</div>
+          <article class="tech-card" aria-labelledby="t2">
+            <h3 id="t2">Growth</h3>
+            <p class="tag">Intermediate players</p>
+            <p class="badge">Can play a few songs & scales</p>
+            <ul class="points">
+              <li class="subtitle">Musical solos</li>
+              <li class="subtitle">Tighter riffs</li>
+              <li class="subtitle">Solid consistency</li>
+            </ul>
+          </article>
+        </li>
+        <li class="stage">
+          <div class="tech-pill">3</div>
+          <article class="tech-card" aria-labelledby="t3">
+            <h3 id="t3">Mastery</h3>
+            <p class="tag">Advanced players</p>
+            <p class="badge">Strong technique & aim solidify</p>
+            <ul class="points">
+              <li class="subtitle">Write great songs</li>
+              <li class="subtitle">Speed with clarity</li>
+              <li class="subtitle">Stage-ready tone</li>
+            </ul>
+          </article>
+        </li>
+        
+        <li class="stage">
+          <div class="tech-pill"><i class="bi bi-star-fill"></i></div>
+          <article class="tech-card" aria-labelledby="t4">
+            <h3 id="t4">Mindset</h3>
+            <p class="tag">Artists & band members</p>
+            <p class="badge">I need a strategy to differentiate</p>
+            <ul class="points col">
+              <li class="subtitle">Confidence & vision</li>
+              <li class="subtitle">Unique identity</li>
+              <li class="subtitle">Career habits</li>
+            </ul>
+          </article>
+        </li>
+      </ol>
+      <button class="btn-main" onclick="window.open('https://calendly.com/info-felipemotta/30min')">Start Journey</i></button>
     </div>
   </section>
 
-  <!-- BOOK -->
-  <section id="book" class="section contact text-center">
-    <div class="container">
-      <span class="sub">Book</span>
-      <h2>Unleash the <strong>beast</strong> inside</h2>
-      <p class="desc"><em>because legends were never meant to be average</em></p>
-      <button class="btn-main mt-2" 
-              onclick="window.open('https://calendly.com/info-felipemotta/60-minute-guitar-lesson', '_blank')"
-              type="button">Book a Lesson</button>
-      <p class="mt-3" style="color:var(--muted)">Unsure? <a target="_blank" href="https://calendly.com/info-felipemotta/30min" style="color:inherit;opacity:.9;text-decoration:underline">Let’s have a virtual coffee ☕</a></p>
-    </div>
-  </section>
-  
   <!-- MERCH -->
   <section id="merch" class="section text-center merch">
-    <div class="container">
+    <div class="container merch-container">
       <span class="sub">Merch</span>
       <h2>Premium Essentials</h2>
-      <p class="lead mx-auto">Minimal, designed to play with style. </p>
+      <p class="subtitle lead mx-auto">Minimal, designed to play with style. </p>
       <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 align-items-stretch">
         <div class="col">
           <div class="card h-100">
-            <img loading="lazy" src="https://placehold.co/700x700/121212/EFEFEF?text=Pro+Picks+V1" alt="Premium guitar picks set V1 by Felipe Motta" />
+            <img loading="lazy" src="/images/PickSample.png" alt="Premium guitar picks set V1 by Felipe Motta" />
             <h5>Pro Pick Set — V1</h5>
             <p class="mb-2">Balanced grip. Clear attack. Your daily driver.</p>
             <a class="btn-ghost" href="">Buy</a>
@@ -248,7 +280,7 @@ TODO: ENABLE WHEN FINAL DOMAIN-->
         </div>
         <div class="col">
           <div class="card h-100">
-            <img loading="lazy" src="https://placehold.co/700x700/131313/FFFFFF?text=Pro+Picks+V2" alt="Premium guitar picks set V2 by Felipe Motta" />
+            <img loading="lazy" src="/images/PickSample.png" alt="Premium guitar picks set V2 by Felipe Motta" />
             <h5>Pro Pick Set — V2</h5>
             <p class="mb-2">Extra bite. Fast response. Studio + stage.</p>
             <a class="btn-ghost" href="">Buy</a>
@@ -256,16 +288,13 @@ TODO: ENABLE WHEN FINAL DOMAIN-->
         </div>
         <div class="col">
           <div class="card h-100">
-            <img loading="lazy" src="https://placehold.co/700x700/151515/F5F5F5?text=Personalised+Picks" alt="Personalised customized guitar picks by Felipe Motta" />
+            <img loading="lazy" src="/images/PickSample.png" alt="Personalised customized guitar picks by Felipe Motta" />
             <h5>Personalised Picks</h5>
             <p class="mb-2">Your logo. Your vibe. Limited runs.</p>
             <a class="btn-ghost" href="">Buy</a>
           </div>
         </div>
       </div>
-      <div class="mt-4">
-        <a class="btn-ghost" href="">More</a>
-      </div-->
     </div>
   </section>
 
@@ -274,14 +303,13 @@ TODO: ENABLE WHEN FINAL DOMAIN-->
     <div class="container">
       <span class="sub">Contact</span>
       <h2>Collabs • Sponsorships • Sessions</h2>
-      <p class="desc">Let's talk</p>
-      <p class="lead mx-auto">Email: <a href="mailto:info.felipemotta@gmail.com" style="color:inherit;text-decoration:underline">info.felipemotta@gmail.com</a></p>
+      <p class="subtitle lead mx-auto desc">Let's talk</p>
+      <p class="lead mx-auto"><a href="mailto:info.felipemotta@gmail.com" style="color:inherit;text-decoration:underline" alt="info.felipemotta@gmail.com"><i class="bi bi-envelope"></i></a></p>
       <div class="d-flex justify-content-center gap-3 mt-2 socials">
         <a href="https://www.instagram.com/moment_of_felipe" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
         <a href="https://www.tiktok.com/@moment_of_felipe" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
         <a href="https://www.facebook.com/people/Moment-of-Felipe/61575781751230/" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.youtube.com/@moment_of_felipe?sub_confirmation=1" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
-        <a href="https://open.spotify.com/user/76btnyr2rynzglf9z81bu8dxs?si=28ae89dc1a8b4cee" aria-label="Spotify" title="Spotify"><i class="bi bi-spotify"></i></a>
       </div>
     </div>
   </section>
@@ -351,10 +379,15 @@ TODO: ENABLE WHEN FINAL DOMAIN-->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Tecnique 
+    const tecniqueCards=document.querySelectorAll('#technique .tech-card');
+    const IntersectionObserverTecnique=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');IntersectionObserverTecnique.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -10% 0px'});
+    tecniqueCards.forEach(c=>IntersectionObserverTecnique.observe(c));
+
     // About appear paragraphs
     const section=document.querySelector('#about');
-    const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){section.classList.add('in-view');io.unobserve(section);}})},{threshold:0.2});
-    io.observe(section);
+    const intersectionObserverAbout = new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){section.classList.add('in-view');IntersectionObserverTecnique.unobserve(section);}})},{threshold:0.2});
+    intersectionObserverAbout.observe(section);
 
     // Close nav
     document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
