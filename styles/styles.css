@@ -40,7 +40,6 @@ img,
 svg {
   max-width: 100%;
   height: auto;
-  display: block;
 }
 
 /* ------------------------------ LOGOS ------------------------------ */
@@ -274,7 +273,6 @@ svg.logo-holo {
 
 .hero-box {
   max-width: 920px;
-  justify-items: center;
 }
 
 .hero-title {
@@ -448,7 +446,7 @@ section.about-split {
   font-size: clamp(2.2rem, 3vw, 3.2rem);
   font-weight: 800;
   background: linear-gradient(180deg, #fff 0%, #999 100%);
-  -webkit-background-clip: text;
+  --webkit-background-clip: text;
   color: transparent;
   margin-bottom: .75rem;
   opacity: 0;
