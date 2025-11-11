@@ -1,41 +1,48 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Felipe Motta | Unleash the Beast Inside</title>
-  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <meta charset="utf-8" />
+  <title>Felipe Motta Guitar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
+
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
   <!-- PWA tone tweaks -->
   <meta name="theme-color" content="#0a0a0a" />
 
   <!-- Primary SEO -->
-  <meta name="description" content="Felipe Motta offers premium, personalized guitar mentorship for metal & rock players. Free assessment, simple path." />
-  <link rel="canonical" href="https://felipemottaofficial.com/" />
+  <meta name="description" content="Premium metal & rock guitar mentorship with Felipe Motta in Switzerland. Personalized guitar lessons, modern tone, and mindset coaching for serious players. Free assessment, simple path." />
+  <meta name="author" content="Felipe Motta" />
   <meta name="robots" content="index, follow" />
-  
-  <!--Open Graph / Facebook -->
+  <meta name="keywords" content="metal guitar lessons, guitar mentor, guitar instructor, metal guitarist, rock guitar lessons, personalized guitar coaching, guitar mentorship, Switzerland" />
+  <link rel="canonical" href="https://felipemottaofficial.com/" />
+
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Felipe Motta | Guitar Instructor, Mentor & Metal Artist" />
-  <meta property="og:description" content="Personalized guitar mentorship that helps you unleash the beast inside. Book a lesson or grab a free virtual coffee." />
+  <meta property="og:title" content="Metal Guitar Mentor in Switzerland | Felipe Motta" />
+  <meta property="og:description" content="Personalized metal & rock guitar mentorship that helps you unleash the beast inside. Book a lesson or grab a free virtual coffee." />
   <meta property="og:url" content="https://felipemottaofficial.com/" />
   <meta property="og:image" content="https://felipemottaofficial.com/images/slide1.jpg" />
-  
-  <!--Twitter -->
+  <meta property="og:site_name" content="Felipe Motta Official" />
+  <meta property="og:locale" content="en_CH" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Felipe Motta | Guitar Mentor & Metal Artist" />
-  <meta name="twitter:description" content="Premium, personalized mentorship for modern guitarists. Free assessment. Book now." />
-  <meta name="twitter:image" content="https://felipemottaofficial.com/images/slide1.jpg" />  
-  
+  <meta name="twitter:title" content="Metal Guitar Mentor & Guitar Instructor | Felipe Motta" />
+  <meta name="twitter:description" content="Premium, personalized mentorship for modern metal & rock guitarists. Free assessment and a clear path to progress." />
+  <meta name="twitter:image" content="https://felipemottaofficial.com/images/slide1.jpg" />
+
+  <!-- CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
   <link rel="stylesheet" href="/styles/styles.css" />
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD: Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://felipemottaofficial.com/#person",
     "name": "Felipe Motta",
     "url": "https://felipemottaofficial.com/",
     "sameAs": [
@@ -45,18 +52,50 @@
       "https://www.facebook.com/people/Moment-of-Felipe/61575781751230/",
       "https://www.tiktok.com/@moment_of_felipe"
     ],
-    "jobTitle": "Guitar Mentor & Metal Artist",
-    "description": "Personalized guitar mentorship for modern players with a free assessment and simple path.",
-    "knowsAbout": ["metal guitar", "guitar tone", "songwriting", "performance", "mindset coaching"],
-    "address": {"@type": "PostalAddress", "addressCountry": "CH"}
+    "jobTitle": "Metal Guitar Mentor & Artist",
+    "description": "Metal and rock guitar mentor offering personalized guitar lessons, tone coaching, and mindset work for modern players.",
+    "knowsAbout": [
+      "metal guitar",
+      "rock guitar",
+      "guitar tone",
+      "songwriting",
+      "performance",
+      "mindset coaching"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "CH"
+    }
   }
   </script>
+
+  <!-- JSON-LD: WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Felipe Motta",
-    "url": "https://felipemottaofficial.com/"
+    "@id": "https://felipemottaofficial.com/#website",
+    "name": "Felipe Motta Official",
+    "url": "https://felipemottaofficial.com/",
+    "publisher": {
+      "@id": "https://felipemottaofficial.com/#person"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: WebPage (home) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://felipemottaofficial.com/#home",
+    "url": "https://felipemottaofficial.com/",
+    "name": "Metal Guitar Mentor & Instructor in Switzerland | Felipe Motta",
+    "description": "Premium, personalized metal & rock guitar mentorship with a free assessment and a simple path to progress.",
+    "inLanguage": "en",
+    "isPartOf": {
+      "@id": "https://felipemottaofficial.com/#website"
+    }
   }
   </script>
 </head>
@@ -65,7 +104,7 @@
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <svg class="logo-holo me-2" viewBox="100 2 815 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo placeholder">
+        <svg class="logo-holo me-2" viewBox="100 2 815 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Felipe Motta metal guitar mentor logo">
           <defs>
             <filter id="metalBase1" x="-50%" y="-50%" width="200%" height="200%">
               <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" result="turb" />
@@ -155,10 +194,18 @@
   <header id="hero">
     <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000" data-bs-touch="true" data-bs-pause="false">
       <div class="carousel-inner">
-        <div class="carousel-item active"><img src="/images/slide1.jpg" alt="Guitarist on stage"></div>
-        <div class="carousel-item">       <img src="/images/slide2.jpg" alt="Close-up guitar hands"></div>
-        <div class="carousel-item">       <img src="/images/slide3.jpg" alt="Bar live"></div>
-        <div class="carousel-item">       <img src="/images/slide4.jpg" alt="Studio session"></div>
+        <div class="carousel-item active">
+          <img src="/images/slide1.jpg" alt="Metal guitarist Felipe Motta performing live on stage">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/slide2.jpg" alt="Close-up of modern metal guitar technique and hand positioning">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/slide3.jpg" alt="Live metal show in an intimate bar venue">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/slide4.jpg" alt="Recording modern metal guitar in the studio">
+        </div>
       </div>
       <!-- Edge click navigation (no icons) -->
       <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" aria-label="Previous"><span class="visually-hidden">Previous</span></button>
@@ -166,7 +213,7 @@
 
       <div class="hero-overlay">
         <div class="hero-box">
-          <img class="img-fluid signature-image" src="/images/signature.svg"/>
+          <img class="img-fluid signature-image" src="/images/signature.svg" alt="Felipe Motta signature" />
           <h1 class="display-6"><strong>Guitarist <i class="bi bi-x" style="font-size:smaller;"></i> Instructor</strong></h1>
           <p class="desc lead mx-auto"><em>Feeling stuck on guitar? Let me be your guide</em></p>
           <button class="btn-main" onclick="window.open('https://calendly.com/info-felipemotta/30min')">Start your journey</i></button>
@@ -324,7 +371,7 @@
   <footer>
     <div class="container d-flex flex-column align-items-center">
       <a class="navbar-brand" href="#">
-        <svg class="logo-holo-footer me-2" viewBox="100 2 815 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo placeholder">
+        <svg class="logo-holo-footer me-2" viewBox="100 2 815 540" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Felipe Motta metal guitar mentor logo">
           <defs>
             <filter id="metalBase2" x="-50%" y="-50%" width="200%" height="200%">
               <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="5" result="turb" />
