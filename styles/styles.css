@@ -692,7 +692,7 @@ a.projectssvgslinks {
 #technique .subtitle {
   color: var(--muted);
   max-width: 56ch;
-  margin: 0 auto 2rem;
+  margin: 0 0 2rem;
 }
 
 /* Journey layout */
@@ -895,7 +895,16 @@ a.projectssvgslinks {
 }
 
 #merch .subtitle {
-    color: var(--muted);
-    max-width: 56ch;
-    margin: 0 auto 2rem;
+  color: var(--muted);
+  max-width: 56ch;
+  margin: 0 0 2rem;
+}
+
+/*============ contact =============*/
+#contact .contact-container {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
 }
