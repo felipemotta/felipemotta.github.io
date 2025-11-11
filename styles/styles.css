@@ -573,6 +573,12 @@ a.projectssvgslinks {
   display: flex;
 }
 
+#about .subtitle {
+  color: var(--muted);
+  max-width: 56ch;
+  margin: 0 0 2rem;
+}
+
 /* Portrait overlay mode */
 @media (max-width: 1220px) {
   section.about-split {
@@ -681,11 +687,6 @@ a.projectssvgslinks {
   color: var(--muted);
   text-transform: uppercase;
   margin-top: 2vh;
-}
-
-#technique h2 {
-  margin: .25rem 0 .6rem;
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
 }
 
 #technique .subtitle {
