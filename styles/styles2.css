@@ -423,7 +423,6 @@ section.about-split {
   content-visibility: auto;
   contain: content;
   contain-intrinsic-size: 900px;
-  padding-top: 60px;
 }
 
 .about-text {
@@ -1075,72 +1074,21 @@ a.projectssvgslinks {
   }
 }
 
-/* --- Technique: shrink cards on small screens --- */
-@media (max-height: 1300px) {
-  /* let the card be much shorter on mobile */
-  .technique .tier {
-    min-height: 360px;   /* override clamp(360px, 70vh, 620px) */
-  }
-
-  /* smaller image block so there is room for text + button */
-  .technique .tier-image {
-    min-height: 160px;   /* override clamp(160px, 30vh, 300px) */
-    margin-bottom: 10px;
-  }
-
-  /* tighten vertical spacing a bit */
-  .technique .tier-face {
-    padding: 12px 10px 12px;
-  }
-
-  .technique .tier-toggle {
-    padding: 8px 12px;
-  }
-
-  .technique .tech-shell {
-    padding-bottom: 64px; /* still room for CTA, but overall section shorter */
-  }
-}
 
 /*============ Merch =============*/
 #merch .merch-container {
   display:flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-
-  /* Desktop / large screens */
   min-height: 100vh;
-  max-height: 1300px;  /* your chosen cap */
-  height: auto;
+  align-items: center;
 }
 
 #merch .subtitle {
   color: var(--muted);
   max-width: 56ch;
-  margin: 0;
+  margin: 0 0 2rem;
 }
-
-#merch .col {
-  margin: 0.1;
-}
-
-
-/* Merch: mobile override to avoid cutting */
-@media (max-height: 1300px) {
-  #merch .merch-container {
-    max-height: none;
-    min-height: auto;
-    height: auto;
-    padding: 40px 16px 64px;
-    align-items: stretch;
-  }
-    
-  #merch img {
-    max-height: 300px;
-  }
-}
-
 
 /*============ contact =============*/
 #contact .contact-container {
