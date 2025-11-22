@@ -714,7 +714,7 @@ a.projectssvgslinks {
      - preferred: 70vh (scale with viewport height)
      - maximum: 620px (your current design)
   */
-  min-height: clamp(360px, 70vh, 620px);
+  height: clamp(360px, 70vh, 620px);
 }
 
 .technique .tier-inner {
@@ -1049,14 +1049,12 @@ a.projectssvgslinks {
     width: 100%;
   }
 
-  /* Ensure tier structure fills grid cell nicely on portrait */
+  /* Full width per card without making it a flex container */
   .technique .tech-grid .tier {
     width: 100%;
-    display: flex;
   }
 
   .technique .tech-grid .tier-inner {
-    flex: 1;
     display: flex;
     flex-direction: column;
   }
@@ -1075,16 +1073,16 @@ a.projectssvgslinks {
   }
 }
 
-/* --- Technique: shrink cards on small screens --- */
+/* Technique: shrink cards on smaller heights */
 @media (max-height: 1300px) {
-  /* let the card be much shorter on mobile */
+  /* let the card be shorter on smaller viewports */
   .technique .tier {
-    min-height: 360px;   /* override clamp(360px, 70vh, 620px) */
+    height: 360px;   /* explicit height so Safari keeps 100 percent height for inner */
   }
 
-  /* smaller image block so there is room for text + button */
+  /* smaller image block so there is room for text and button */
   .technique .tier-image {
-    min-height: 160px;   /* override clamp(160px, 30vh, 300px) */
+    min-height: 160px;
     margin-bottom: 10px;
   }
 
@@ -1098,9 +1096,10 @@ a.projectssvgslinks {
   }
 
   .technique .tech-shell {
-    padding-bottom: 64px; /* still room for CTA, but overall section shorter */
+    padding-bottom: 64px;
   }
 }
+
 
 /*============ Merch =============*/
 #merch .merch-container {
