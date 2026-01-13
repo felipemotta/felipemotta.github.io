@@ -714,7 +714,7 @@ a.projectssvgslinks {
      - preferred: 70vh (scale with viewport height)
      - maximum: 620px (your current design)
   */
-  height: clamp(360px, 70vh, 620px);
+  height: clamp(100px, 70vh, 620px);
 }
 
 .technique .tier-inner {
@@ -843,7 +843,8 @@ a.projectssvgslinks {
 
 .technique .tier-sub {
   margin-top: 2px;
-  font-size: .76rem;
+  font-size: .90rem;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--muted);
 }
 
@@ -1075,10 +1076,7 @@ a.projectssvgslinks {
 
 /* Technique: shrink cards on smaller heights */
 @media (max-height: 1300px) {
-  /* let the card be shorter on smaller viewports */
-  .technique .tier {
-    height: 360px;   /* explicit height so Safari keeps 100 percent height for inner */
-  }
+
 
   /* smaller image block so there is room for text and button */
   .technique .tier-image {
