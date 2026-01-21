@@ -532,6 +532,23 @@ a.projectssvgslinks {
   }
 }
 
+/* Reveal on scroll about me paraghraph */
+.in-view .about-headline,
+.in-view .about-desc {
+  opacity: 1;
+  transform: none;
+}
+
+/* Minimized verrsion of reveal on scroll when reduced montion accesibility setting enabled */
+@media (prefers-reduced-motion: reduce) {
+  .about-headline,
+  .about-desc {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 /* ------------------------------ TECHNIQUE SECTION ------------------------------ */
 
 /* ============================== */
