@@ -1157,6 +1157,10 @@ a.projectssvgslinks {
 
 
 /*============ CONTACT =============*/
+#contact
+{
+  padding: 0%;
+}
 #contact .contact-container {
   display:flex;
   flex-direction: column;
