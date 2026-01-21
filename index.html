@@ -319,7 +319,7 @@
         <div class="hero-box">
           <img class="img-fluid signature-image" src="/images/signature.svg" alt="Felipe Motta signature" />
           <h1 class="display-6"><strong>Guitarist<i class="bi bi-dot" style="opacity: 0.60;"></i>Mentor</strong></h1>
-          <p class="desc lead mx-auto"><em>Feeling stuck on guitar? Let me be your guide.</em></p>
+          <p class="subtitle lead">Feeling stuck on guitar? Let me be your guide.</p>
           <button class="btn-main" onclick="window.open('https://calendly.com/info-felipemotta/30min')">Start your journey <i class="bi bi-arrow-up-right"style="font-size:smaller; opacity: 0.60;"></i></button>
         </div>
       </div>
@@ -612,7 +612,7 @@
                     <div class="tier-name">Mindset</div>
                   </div>
                   <div class="tier-text">
-                    <div class="tier-sub">“Stop guessing. Move smart.”</div>
+                    <div class="tier-sub">“I stop guessing. I move smart.”</div>
                   </div>
                 </div>
               </div>
@@ -691,13 +691,18 @@
       <span class="sub">Shop</span>
       <h2>Premium Essentials</h2>
       <p class="subtitle lead mx-auto">Minimal, designed to play with style. </p>
-      <div class="row row-cols-1 row-cols-md-3 g-4 mt-2 align-items-stretch">
+      <div class="row row-cols-1 row-cols-md-2 g-4 mt-2 align-items-center">
         <div class="col">
           <div class="card h-100">
             <img loading="lazy" src="/images/PickSample.png" alt="Premium guitar picks set V1 by Felipe Motta" />
             <h5>Pro Pick Set — V1</h5>
             <p class="mb-2">Balanced grip. Clear attack. Your daily driver.</p>
-            <a class="btn-ghost" href="">Buy</a>
+            <button
+              class="btn-ghost"
+              type="button"
+              onclick="window.open('https://felipe-motta-official.myshopify.com/products/guitar-pick?variant=63166466851165','_blank')">
+              Buy <i class="bi bi-arrow-up-right"style="font-size:smaller; opacity: 0.60;"></i>
+            </button>
           </div>
         </div>
         <div class="col">
@@ -705,19 +710,30 @@
             <img loading="lazy" src="/images/PickSample2.png" alt="Premium guitar picks set V2 by Felipe Motta" />
             <h5>Pro Pick Set — V2</h5>
             <p class="mb-2">Extra bite. Fast response. Studio + stage.</p>
-            <a class="btn-ghost" href="">Buy</a>
+            <button
+              class="btn-ghost"
+              type="button"
+              onclick="window.open('https://felipe-motta-official.myshopify.com/products/guitar-pick?variant=63166466883933','_blank')">
+              Buy <i class="bi bi-arrow-up-right"style="font-size:smaller; opacity: 0.60;"></i>
+            </button>
           </div>
         </div>
-        <div class="col">
+        <!-- <div class="col">
           <div class="card h-100">
             <img loading="lazy" src="/images/PickSample.png" alt="Personalised customized guitar picks by Felipe Motta" />
             <h5>Personalised Picks</h5>
             <p class="mb-2">Your logo. Your vibe. Limited runs.</p>
             <a class="btn-ghost" href="">Buy</a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
+    <button
+      class="btn btn-light btn-primary btn-lg btn-shop"
+      type="button"
+      onclick="window.open('https://felipe-motta-official.myshopify.com/','_blank')">
+      <i class="bi bi-handbag"style="font-size: 1.3rem" > </i> Shop now <sub style="color:rgba(0, 168, 0, 0.61)">Powered by Shopify</sub></i>
+    </button>
   </section>
 
   <!-- CONTACT -->
@@ -730,10 +746,10 @@
         <a href="mailto:info@felipemottaofficial.com" style="color:inherit;text-decoration:underline" alt="info@felipemottaofficial.com">info@felipemottaofficial.com</a>
       </p>
       <div class="d-flex justify-content-center gap-3 mt-2 socials">
-        <a href="https://www.instagram.com/moment_of_felipe" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
-        <a href="https://www.tiktok.com/@moment_of_felipe" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
-        <a href="https://www.facebook.com/people/Moment-of-Felipe/61575781751230/" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.youtube.com/@moment_of_felipe?sub_confirmation=1" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/moment_of_felipe" aria-label="Instagram" title="Instagram"><i class="bi bi-instagram"></i></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.tiktok.com/@moment_of_felipe" aria-label="TikTok" title="TikTok"><i class="bi bi-tiktok"></i></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/people/Moment-of-Felipe/61575781751230/" aria-label="Facebook" title="Facebook"><i class="bi bi-facebook"></i></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/@moment_of_felipe?sub_confirmation=1" aria-label="YouTube" title="YouTube"><i class="bi bi-youtube"></i></a>
       </div>
     </div>
   </section>
@@ -797,9 +813,9 @@
           </g>
         </svg>
       </a>
-      <p class="lead sentence"><i class="bi bi-quote"></i> <em>Care for your potential,</em></p>
-      <p class="lead sentence"><em>because <strong>legends</strong> were never meant to be average.</em></p>
-      <p class="lead year ">© <span id="year"></span> Felipe Motta</p>
+      <p class="lead sentence"><i class="bi bi-quote"></i> Care for your potential,</p>
+      <p class="lead sentence">because <strong>legends</strong> were never meant to be average.</p>
+      <p class="lead year ">© 2025 – <span id="year"></span> Felipe Motta</p>
     </div>
   </footer>
   
@@ -808,28 +824,5 @@
 
   <!-- Site JS -->
   <script src="/js/main.js" defer></script>
-  
-  <script>
-    (function () {
-      const tiers = document.querySelectorAll('.technique .tier');
-
-      tiers.forEach((tier) => {
-        const toggles = tier.querySelectorAll('.tier-toggle');
-        toggles.forEach((btn) => {
-          btn.addEventListener('click', () => {
-            const alreadyFlipped = tier.classList.contains('flipped');
-
-            // Close all other tiers
-            tiers.forEach((t) => t.classList.remove('flipped'));
-
-            // Toggle this one
-            if (!alreadyFlipped) {
-              tier.classList.add('flipped');
-            }
-          });
-        });
-      });
-    })();
-  </script>
 </body>
 </html>

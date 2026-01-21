@@ -1002,15 +1002,14 @@ a.projectssvgslinks {
 
 /*============ SHOP =============*/
 #merch .merch-container {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  /* Desktop / large screens */
-  min-height: 100vh;
-  max-height: 1300px;  /* your chosen cap */
-  height: auto;
+    max-width: 1800px;
+    min-height: 100vh;  /* at least full viewport */
+    height: auto;       /* but allow taller if content needs it */
+    margin: 0 auto;
+    width: 100%;
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 #merch .subtitle {
@@ -1071,13 +1070,45 @@ a.projectssvgslinks {
   margin-top: auto;
 }
 
+.btn-shop {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  color: #050507;
+  font-size: .84rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, .85);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 /* Merch: mobile override to avoid cutting */
+@media (orientation: portrait) {
+  #merch .merch-container {
+    padding: 24px 10px 32px;
+    max-height: none;
+    min-height: auto;
+    height: auto;
+    align-items: stretch;
+  }
+}
+@media (orientation: landscape) {
+  #merch .merch-container {
+    padding: 32px 24px 40px;
+  }
+}
 @media (max-height: 1300px) {
   #merch .merch-container {
     max-height: none;
     min-height: auto;
     height: auto;
-    padding: 40px 16px 64px;
+    padding-bottom: 64px;
     align-items: stretch;
   }
     

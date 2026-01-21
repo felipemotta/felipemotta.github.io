@@ -88,3 +88,26 @@
     // expose for inline HTML onclick="scrollWithOffset('id')"
     window.scrollWithOffset = scrollWithOffset;
   });
+
+    // ---------------- Technique toggle ----------------
+
+  (function () {
+      const tiers = document.querySelectorAll('.technique .tier');
+
+      tiers.forEach((tier) => {
+        const toggles = tier.querySelectorAll('.tier-toggle');
+        toggles.forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const alreadyFlipped = tier.classList.contains('flipped');
+
+            // Close all other tiers
+            tiers.forEach((t) => t.classList.remove('flipped'));
+
+            // Toggle this one
+            if (!alreadyFlipped) {
+              tier.classList.add('flipped');
+            }
+          });
+        });
+      });
+    })();
