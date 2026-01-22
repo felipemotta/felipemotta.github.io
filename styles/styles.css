@@ -1043,7 +1043,7 @@ a.projectssvgslinks {
   background: var(--bg);
   color: var(--fg);
   width: 100%;
-  display: flex;
+ /* display: flex;*/
   justify-content: center;
 }
 
