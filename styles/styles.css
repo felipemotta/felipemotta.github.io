@@ -1039,6 +1039,14 @@ a.projectssvgslinks {
 
 
 /*============ SHOP =============*/
+#merch {
+  background: var(--bg);
+  color: var(--fg);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 #merch .merch-container {
     max-width: 1800px;
     min-height: 100vh;  /* at least full viewport */
@@ -1182,9 +1190,8 @@ footer .sentence {
     margin-bottom: 0%;
     font-size:1.2rem;  
     font-family: "Arimo", sans-serif;
-
-
 }
+
 footer .year {
 
     margin-left: 15%;
@@ -1192,4 +1199,51 @@ footer .year {
     margin-top: 1%;
     font-size:medium;  
     font-family: "Arimo", sans-serif;
+}
+
+.site-footer{
+  position: relative;
+  overflow: hidden;
+  background: #0a0a0a;        /* fallback if video fails */
+  padding: 2.5rem 1rem;        /* give the footer some height */
+}
+
+/* The background video layer */
+.site-footer .footer-bg-video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.20;              /* this is your “transparency” knob */
+  pointer-events: none;
+  z-index: 0;
+  transform: scale(1.02);     /* hides tiny edge gaps on some browsers */
+  /* opacity: 0.12;
+  mix-blend-mode: screen; */
+  filter:hue-rotate(180deg);
+}
+
+/* Optional overlay to keep text readable */
+.site-footer::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,10,0.8),
+    rgba(32, 32, 32, 0.397)
+  );
+  z-index: 1;
+}
+
+/* Your actual footer content above the video */
+.site-footer .footer-content{
+  position: relative;
+  z-index: 2;
+}
+
+/* Accessibility/perf: respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .site-footer .footer-bg-video{ display: none; }
 }
